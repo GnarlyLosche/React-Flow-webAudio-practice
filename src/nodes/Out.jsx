@@ -15,10 +15,9 @@ export default function Out({ id, data }) {
     <div>
       <Handle type="target" position="top" />
  
-      <div>
-        <p>Output Node</p>
+      <div className ='nodeTitle-container'> <strong>Output</strong> </div>
  
-        <button onClick={toggleAudio}>
+        <button style={{margin:'10px'}} onClick={toggleAudio}>
           {isRunning ? (
             <span role="img" aria-label="mute">
               🔇
@@ -29,7 +28,6 @@ export default function Out({ id, data }) {
             </span>
           )}
         </button>
-      </div>
     </div>
   );
 }

@@ -10,12 +10,14 @@ export const useStore = create((set, get) => ({
             id: 'a',
             data: { frequency: 220, type: 'square' },
             position: { x: 0, y: 0 },
-            style: { backgroundColor: '#84949C', color: 'white' },
         },
         { type: 'amp', id: 'b', data: { gain: 0.50 }, position: { x: 50, y: 150 } },
         { type: 'out', id: 'c', data: { label: 'output' }, position: { x: -50, y: 250 } }
     ],
-    edges: [],
+    edges: [
+        { id: 'e1-2', source: 'a', target: 'b', animated: true },
+        { id: 'e2-3', source: 'b', target: 'c', animated: true },
+    ],
 
     isRunning: isRunning(),
 

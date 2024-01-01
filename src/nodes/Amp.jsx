@@ -15,8 +15,7 @@ export default function Amp({ id, data }) {
     const { setGain } = useStore(selector(id), shallow);
   return (
     <div>
-      <div>
-        <p>Amplitude Node</p>
+      <div className ='nodeTitle-container'> <strong>Amplitude</strong> </div>
  
         <label>
           <span>Gain</span>
@@ -30,7 +29,6 @@ export default function Amp({ id, data }) {
             onChange={setGain} />
           <span>{data.gain}</span>
         </label>
-      </div>
  
       <Handle type="source" position="bottom" />
       <Handle type="target" position="top" />
